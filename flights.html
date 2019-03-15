@@ -1,0 +1,46 @@
+<html>
+<head>
+<b><h1>Search Flights</h1></b>
+<h3 style="color: LightSlateGray; position: absolute; top: 40px; left: 8px;">Fly anywhere.Fly everywhere.</h3><br><br>
+
+<script src="flights_js.js">
+</script>
+</head>
+<body>
+<form name="flights_form">
+	<input type="radio" name="trip_type" id="trip_type" value="One way" onclick="oneWayVisible()" checked="true">One Way &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+	<input type="radio" name="trip_type" id="trip_type" value="Return Trip" onclick="returnTripVisible()"/>Return Trip
+
+
+	<div name="one_way" id="one_way">
+	<b><h6 style="font-size: 20;">From&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;To</h6></b>
+
+	<input type="text" size="30" placeholder="Any worldwide city or airport" name="flight_from" id="flight_from" style="position: absolute; top: 215px; left: 8px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<p style="position: absolute; top: 191px; left: 245px;font-size: 20">&#8652;</p>
+
+
+	<input type="text" size="30" placeholder="Any worldwide city or airport" name="flight_to" id="flight_to" style="position: absolute; top: 215px; left: 300px;">
+
+	<b><h6 style="font-size: 20; top: 220px; left: 8px" name="depart_date" id="depart_date">Depart on</h6></b>
+	<input type="date" style="position: absolute; top: 350px; left: 8px;"">
+</div>
+	
+<!--For Return Trip-->
+<div name="return_Trip" id="return_Trip" hidden="true">
+	<b><h6 style="font-size: 20;">From&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;To</h6></b>
+
+	<input type="text" placeholder="Any worldwide city or airport" name="flight_from" style="position: absolute; top: 215px; left: 8px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<p style="position: absolute; top: 191px; left: 221px;font-size: 20">&#8652;</p>
+	<input type="text" placeholder="Any worldwide city or airport" name="flight_to" style="position: absolute; top: 215px; left: 300px;">
+
+	<b><h6 style="font-size: 20;">Depart on&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Return on</h6></b>
+	<input type="date" style="position: absolute; top: 350px; left: 8px;" name="depart_date" id="depart_date">
+	<input type="date" style="position: absolute; top: 350px; left: 300px;" name="rerurn_date">
+</div>
+<input type="button" value="search" onclick="searchFlights()" style="position: absolute; top: 400px; left: 221px:font-size: 12px;background-color: #008CBA;padding: 12px 28px">
+<div id="detailDiv"></div>
+</form>
+
+</body>
+</html>
+
+
